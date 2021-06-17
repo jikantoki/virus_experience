@@ -10,6 +10,10 @@ Hey guys! We have a gift for you!
 This program is joke virus software.  
 Surprise your friends with it!  
 
+# Screenshots
+![](screen1.jpg)  
+![](screen2.jpg)
+
 # How to use
 1. Prepare Windows computer  
 2. Download  
