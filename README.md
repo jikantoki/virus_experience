@@ -1,4 +1,5 @@
 # virus_experience
+Japanese description is [here](https://blog.caramelos.xyz/electro/virus_make/)
 ___
 # Attention!!!!!
 This program is like a **Computer Virus**.  
